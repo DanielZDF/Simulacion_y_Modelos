@@ -49,4 +49,13 @@ def juego_simulacion(A, M, S):
     resumen_resultados(Res)
     calculo(Res)
 
-juego_simulacion(100,0,50)
+print ("Inserte el monto de la apuesta (minimo 5)")
+while True:
+    Apuesta = int(input())
+    if Apuesta >= 5:
+        break
+print ("Inserte el monto con el que inicia cada juego")
+Monto = int(input())
+print ("Inserte el numero maximo de simulaciones a realizar")
+MaxSim = int(input())
+juego_simulacion(Apuesta,Monto,MaxSim)
